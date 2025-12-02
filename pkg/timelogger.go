@@ -57,3 +57,7 @@ func InformationToString(information Information) string {
 		information.time_end[0], information.time_end[1], information.time_end[2], information.time_end[3], information.time_end[4], information.time_end[5],
 	)
 }
+
+func GetLogFile(information Information) string {
+	return fmt.Sprintf("%s-%s-%s_%s-%s-%s.log", information.time_start[0], information.time_start[1], information.time_start[2], information.time_start[3], information.time_start[4], information.time_start[5])
+}
