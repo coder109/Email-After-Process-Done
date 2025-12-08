@@ -4,3 +4,4 @@ profiler
 macro.go
 *.py
 *.log
+*.bat
