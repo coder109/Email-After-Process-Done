@@ -36,12 +36,9 @@ func main() {
 
 	// Wait till end
 	err = cmd.Wait()
-	if err != nil {
-		panic(err)
-	}
 
 	pkg.GetTime(&info, "end")
 	content := pkg.InformationToString(info)
 	fmt.Println(content)
-	pkg.SendEmail(content, email_info.Sender, email_info.Recver, email_info.Port, email_info.Smtp_server, email_info.Password, raw_log_file)
+	pkg.SendEmail(content, email_info.Sender, email_info.Recver, email_info.Port, email_info.Smtp_server, email_info.Password, raw_log_file, err != nil)
 }
